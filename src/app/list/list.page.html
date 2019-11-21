@@ -10,18 +10,17 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
-    </ion-item>
-  </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
+  <ion-card-content>
+    <ion-card class="card" button *ngFor="let item of (results | async)">
+      <ion-card-header class="ion-text-center">
+        <ion-card-title>{{ item.strDrink }}</ion-card-title>
+        <ion-card-subtitle>{{ item.strAlcoholic }}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <img class="thumbnail" [src]="item.strDrinkThumb" /> <br />
+        <ion-text>{{ item.strInstructions }}</ion-text>
+      </ion-card-content>
+    </ion-card>
+  </ion-card-content>
 </ion-content>

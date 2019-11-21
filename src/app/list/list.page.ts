@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { MenuController } from "@ionic/angular";
+import { ListService } from "./../services/list.service";
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-list",
@@ -7,31 +9,14 @@ import { MenuController } from "@ionic/angular";
   styleUrls: ["list.page.scss"]
 })
 export class ListPage implements OnInit {
-  private selectedItem: any;
-  private icons = [
-    "flask",
-    "wifi",
-    "beer",
-    "football",
-    "basketball",
-    "paper-plane",
-    "american-football",
-    "boat",
-    "bluetooth",
-    "build"
-  ];
-  public items: Array<{ title: string; note: string; icon: string }> = [];
-  constructor(public menu: MenuController) {
-    for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: "Item " + i,
-        note: "This is item #" + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }
-  }
+  results: Observable<any>;
+  resultCount = 10;
 
-  ngOnInit() {}
+  constructor(public menu: MenuController, private listService: ListService) {}
+
+  ngOnInit() {
+    this.results = this.listService.getRandomData(this.resultCount);
+  }
 
   ionViewWillEnter() {
     this.menu.enable(true);

@@ -8,10 +8,6 @@ const routes: Routes = [
     pathMatch: "full"
   },
   {
-    path: "home",
-    loadChildren: () => import("./home/home.module").then(m => m.HomePageModule)
-  },
-  {
     path: "list",
     loadChildren: () => import("./list/list.module").then(m => m.ListPageModule)
   },
@@ -19,6 +15,13 @@ const routes: Routes = [
     path: "sign-in",
     loadChildren: () =>
       import("./sign-in/sign-in.module").then(m => m.SignInPageModule)
+  },
+  {
+    path: "list/:id",
+    loadChildren: () =>
+      import("./list-details/list-details.module").then(
+        m => m.ListDetailsPageModule
+      )
   }
 ];
 
