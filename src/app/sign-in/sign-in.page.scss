@@ -7,6 +7,15 @@ form {
   padding: 0 20px;
 }
 
+#facebook {
+  width: fit-content;
+  margin: auto;
+
+  ion-icon {
+    cursor: pointer;
+  }
+}
+
 .tac {
   text-align: center;
   padding-bottom: 10px;

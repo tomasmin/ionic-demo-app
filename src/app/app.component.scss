@@ -1,0 +1,26 @@
+.login-logo {
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.menu-list {
+  position: absolute !important;
+  top: 35%;
+  width: 100%;
+
+  ion-icon {
+    margin-left: 25%;
+    margin-right: 15px;
+    margin-bottom: 25px;
+  }
+}
+
+#logout {
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 15px;
+
+  ion-icon {
+    cursor: pointer;
+  }
+}
