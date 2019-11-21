@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { mergeMap } from "rxjs/operators";
+import { mergeMap, map } from "rxjs/operators";
 import { forkJoin } from "rxjs";
 
 @Injectable({

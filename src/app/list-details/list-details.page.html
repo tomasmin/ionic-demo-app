@@ -1,9 +1,82 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>list-details</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ information?.strDrink }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+  <ion-card *ngIf="information">
+    <ion-card-header>
+      <ion-card-title color="primary">
+        {{ information.strDrink }}
+      </ion-card-title>
+      <ion-card-subtitle>
+        {{ information.strCategory }} • {{ information.strAlcoholic }}
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <img [src]="information.strDrinkThumb" class="info-img" /> <br />
+      {{ information.strInstructions }}
 
+      <ion-text color="primary"
+        ><h2 class="ingredients">Ingredients</h2></ion-text
+      >
+      <ion-row *ngIf="information.strIngredient1">
+        <ion-col>
+          {{ information.strIngredient1 }}
+        </ion-col>
+        <ion-col>
+          {{ information.strMeasure1 }}
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="information.strIngredient2">
+        <ion-col>
+          {{ information.strIngredient2 }}
+        </ion-col>
+        <ion-col>
+          {{ information.strMeasure2 }}
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="information.strIngredient3">
+        <ion-col>
+          {{ information.strIngredient3 }}
+        </ion-col>
+        <ion-col>
+          {{ information.strMeasure3 }}
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="information.strIngredient4">
+        <ion-col>
+          {{ information.strIngredient4 }}
+        </ion-col>
+        <ion-col>
+          {{ information.strMeasure4 }}
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="information.strIngredient5">
+        <ion-col>
+          {{ information.strIngredient5 }}
+        </ion-col>
+        <ion-col>
+          {{ information.strMeasure5 }}
+        </ion-col>
+      </ion-row>
+
+      <ion-button
+        expand="full"
+        (click)="openWebsite()"
+        *ngIf="information.Website && information.Website != 'N/A'"
+      >
+        <ion-icon name="open" slot="start"></ion-icon>
+        Open Website
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
