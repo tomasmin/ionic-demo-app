@@ -1,10 +1,10 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      List
+      Cocktails
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -18,8 +18,8 @@
       [routerLink]="['/', 'list', item.idDrink]"
     >
       <ion-card-header class="ion-text-center">
-        <ion-card-title>{{ item.strDrink }}</ion-card-title>
-        <ion-card-subtitle
+        <ion-card-title color="primary">{{ item.strDrink }}</ion-card-title>
+        <ion-card-subtitle color="secondary"
           >{{ item.strCategory }} • {{ item.strAlcoholic }}</ion-card-subtitle
         >
       </ion-card-header>

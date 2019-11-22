@@ -16,7 +16,7 @@
       <ion-card-title color="primary">
         {{ information.strDrink }}
       </ion-card-title>
-      <ion-card-subtitle>
+      <ion-card-subtitle color="secondary">
         {{ information.strCategory }} • {{ information.strAlcoholic }}
       </ion-card-subtitle>
     </ion-card-header>
@@ -24,51 +24,71 @@
       <img [src]="information.strDrinkThumb" class="info-img" /> <br />
       {{ information.strInstructions }}
 
-      <ion-text color="primary"
+      <ion-text color="tertiary"
         ><h2 class="ingredients">Ingredients</h2></ion-text
       >
       <ion-row *ngIf="information.strIngredient1">
         <ion-col>
-          {{ information.strIngredient1 }}
+          <ion-text color="tertiary">
+            {{ information.strIngredient1 }}</ion-text
+          >
         </ion-col>
         <ion-col>
-          {{ information.strMeasure1 }}
+          <ion-text color="tertiary">
+            {{ information.strMeasure1 }}
+          </ion-text>
         </ion-col>
       </ion-row>
 
       <ion-row *ngIf="information.strIngredient2">
         <ion-col>
-          {{ information.strIngredient2 }}
+          <ion-text color="tertiary">
+            {{ information.strIngredient2 }}</ion-text
+          >
         </ion-col>
         <ion-col>
-          {{ information.strMeasure2 }}
+          <ion-text color="tertiary">
+            {{ information.strMeasure2 }}
+          </ion-text>
         </ion-col>
       </ion-row>
 
       <ion-row *ngIf="information.strIngredient3">
         <ion-col>
-          {{ information.strIngredient3 }}
+          <ion-text color="tertiary">
+            {{ information.strIngredient3 }}</ion-text
+          >
         </ion-col>
         <ion-col>
-          {{ information.strMeasure3 }}
+          <ion-text color="tertiary">
+            {{ information.strMeasure3 }}
+          </ion-text>
         </ion-col>
       </ion-row>
 
       <ion-row *ngIf="information.strIngredient4">
         <ion-col>
-          {{ information.strIngredient4 }}
+          <ion-text color="tertiary">
+            {{ information.strIngredient4 }}</ion-text
+          >
         </ion-col>
         <ion-col>
-          {{ information.strMeasure4 }}
+          <ion-text color="tertiary">
+            {{ information.strMeasure4 }}
+          </ion-text>
         </ion-col>
       </ion-row>
 
       <ion-row *ngIf="information.strIngredient5">
         <ion-col>
-          {{ information.strIngredient5 }}
+          <ion-text color="tertiary">
+            {{ information.strIngredient5 }}</ion-text
+          >
         </ion-col>
         <ion-col>
-          {{ information.strMeasure5 }}
+          <ion-text color="tertiary">
+            {{ information.strMeasure5 }}
+          </ion-text>
         </ion-col>
       </ion-row>
 

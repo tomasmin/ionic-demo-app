@@ -8,10 +8,13 @@
   top: 35%;
   width: 100%;
 
+  ion-item {
+    margin-bottom: 10px;
+  }
+
   ion-icon {
     margin-left: 25%;
     margin-right: 15px;
-    margin-bottom: 25px;
   }
 }
 
