@@ -10,24 +10,22 @@
 </ion-header>
 
 <ion-content>
-  <ion-card-content>
-    <ion-card
-      class="card"
-      button
-      *ngFor="let item of (results | async)"
-      [routerLink]="['/', 'list', item.idDrink]"
-    >
-      <ion-card-header class="ion-text-center">
-        <ion-card-title color="primary">{{ item.strDrink }}</ion-card-title>
-        <ion-card-subtitle color="secondary"
-          >{{ item.strCategory }} • {{ item.strAlcoholic }}</ion-card-subtitle
-        >
-      </ion-card-header>
+  <ion-card
+    class="card"
+    button
+    *ngFor="let item of (results | async)"
+    [routerLink]="['/', 'list', item.idDrink]"
+  >
+    <ion-card-header class="ion-text-center">
+      <ion-card-title color="primary">{{ item.strDrink }}</ion-card-title>
+      <ion-card-subtitle color="secondary"
+        >{{ item.strCategory }} • {{ item.strAlcoholic }}</ion-card-subtitle
+      >
+    </ion-card-header>
 
-      <ion-card-content>
-        <img class="thumbnail" [src]="item.strDrinkThumb" /> <br />
-        <ion-text>{{ item.strInstructions }}</ion-text>
-      </ion-card-content>
-    </ion-card>
-  </ion-card-content>
+    <ion-card-content>
+      <img class="thumbnail" [src]="item.strDrinkThumb" /> <br />
+      <ion-text>{{ item.strInstructions }}</ion-text>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

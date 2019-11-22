@@ -12,7 +12,7 @@
 
 <ion-content padding>
   <ion-card *ngIf="information">
-    <ion-card-header>
+    <ion-card-header class="ion-text-center">
       <ion-card-title color="primary">
         {{ information.strDrink }}
       </ion-card-title>
@@ -24,7 +24,7 @@
       <img [src]="information.strDrinkThumb" class="info-img" /> <br />
       {{ information.strInstructions }}
 
-      <ion-text color="tertiary"
+      <ion-text color="tertiary" class="ion-text-center"
         ><h2 class="ingredients">Ingredients</h2></ion-text
       >
       <ion-row *ngIf="information.strIngredient1">
